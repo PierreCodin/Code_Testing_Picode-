@@ -67,7 +67,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs mx-auto video-neon-glow">
               <video 
-                src="/lovable-uploads/Video.mp4" 
+                src="/lovable-uploads/video.mp4" 
                 className="w-full h-full object-cover"
                 controls
                 controlsList="nodownload"

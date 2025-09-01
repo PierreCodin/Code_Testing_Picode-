@@ -46,11 +46,12 @@ const ProcessSection = () => {
           {steps.map((step, index) => (
             <div key={index} className="text-center space-y-6 group">
               {/* Illustration principale - icône seulement */}
-              <div className="flex justify-center">
+              <div className="flex justify-center mb-6">
                  <img 
                    src={step.icon} 
                    alt={`Illustration ${step.title}`}
-                   className="w-24 h-24 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                   className="w-20 h-20 object-contain drop-shadow-lg"
+                   style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}
                  />
               </div>
               

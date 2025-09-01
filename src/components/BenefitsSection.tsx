@@ -18,9 +18,15 @@ const BenefitsSection = () => {
                <img 
                  src="/lovable-uploads/revwheel_client.png" 
                  alt="Résultats clients RevWheel" 
-                 className="w-full h-auto object-cover rounded-2xl"
+                 className="w-full h-auto object-contain rounded-2xl"
                  loading="lazy"
-                 style={{ imageRendering: 'crisp-edges', maxHeight: 'none' }}
+                 style={{ 
+                   imageRendering: 'crisp-edges', 
+                   maxHeight: 'none',
+                   objectFit: 'contain',
+                   width: '100%',
+                   height: 'auto'
+                 }}
                />
               
               {/* Floating animation overlay */}
