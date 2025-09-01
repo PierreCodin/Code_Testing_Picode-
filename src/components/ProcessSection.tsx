@@ -45,14 +45,9 @@ const ProcessSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {steps.map((step, index) => (
             <div key={index} className="text-center space-y-6 group">
-              {/* Illustration principale - icône seulement */}
+              {/* Espace réservé sans icône */}
               <div className="flex justify-center mb-6">
-                 <img 
-                   src={step.icon} 
-                   alt={`Illustration ${step.title}`}
-                   className="w-20 h-20 object-contain drop-shadow-lg"
-                   style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}
-                 />
+                <div className="w-20 h-20"></div>
               </div>
               
               {/* Numéro de l'étape */}
