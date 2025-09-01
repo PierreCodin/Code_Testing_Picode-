@@ -45,12 +45,22 @@ const ProcessSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {steps.map((step, index) => (
             <div key={index} className="text-center space-y-6 group">
+              {/* Illustration principale - icône seulement */}
+              <div className="flex justify-center">
+                 <img 
+                   src={step.icon} 
+                   alt={`Illustration ${step.title}`}
+                   className="w-24 h-24 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                 />
+              </div>
+              
+              {/* Numéro de l'étape */}
               <div className="relative">
-                <div className="w-16 h-16 mx-auto gradient-hero rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-button group-hover:scale-125 transition-smooth">
+                <div className="w-12 h-12 mx-auto gradient-hero rounded-full flex items-center justify-center text-white text-lg font-bold shadow-button">
                   {step.number}
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent opacity-30"></div>
+                  <div className="hidden lg:block absolute top-6 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent opacity-30"></div>
                 )}
               </div>
               
@@ -58,18 +68,9 @@ const ProcessSection = () => {
                 {step.title}
               </h3>
               
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground">
                 {step.description}
               </p>
-              
-              {/* Illustration */}
-              <div className="flex justify-center">
-                 <img 
-                   src={step.icon} 
-                   alt={`Illustration ${step.title}`}
-                   className="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                 />
-              </div>
             </div>
           ))}
         </div>
