@@ -65,14 +65,13 @@ const HeroSection = () => {
 
           {/* Right Content - Video Mockup */}
           <div className="relative">
-            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs mx-auto video-neon-glow">
+            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-8 video-neon-glow">
               <video 
-                src="/lovable-uploads/revwheel-hero-video.mp4" 
+                src="/lovable-uploads/Video.mp4" 
                 className="w-full h-full object-cover"
                 controls
                 controlsList="nodownload"
                 preload="metadata"
-                poster="/lovable-uploads/revwheel_client.png"
                 muted
                 playsInline
                 onLoadStart={() => console.log('Video loading started')}
