@@ -64,14 +64,14 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Video Mockup */}
-          <div className="relative">
-            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-8 video-neon-glow">
+          <div className="relative flex justify-end">
+            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-16 video-neon-glow">
               <video 
-                src="/lovable-uploads/Video.mp4" 
+                src="video.mp4" 
                 className="w-full h-full object-cover"
                 controls
                 controlsList="nodownload"
-                preload="metadata"
+                preload="auto"
                 muted
                 playsInline
                 onLoadStart={() => console.log('Video loading started')}

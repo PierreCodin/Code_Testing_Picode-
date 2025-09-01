@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const PricingSection = () => {
   const [isAnnual, setIsAnnual] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   
   const features = [
     "Configuration en 5 minutes",
@@ -28,13 +29,25 @@ const PricingSection = () => {
           
            <div className="flex items-center justify-center space-x-8 mt-8">
              <button 
-               onClick={() => setIsAnnual(false)}
+               onClick={() => {
+                 setIsTransitioning(true);
+                 setTimeout(() => {
+                   setIsAnnual(false);
+                   setIsTransitioning(false);
+                 }, 250);
+               }}
                className={`px-4 py-2 rounded-full text-lg font-medium transition-smooth ${!isAnnual ? 'bg-primary/10 text-primary font-semibold' : 'text-muted-foreground'}`}
              >
                Mensuel
              </button>
              <button 
-               onClick={() => setIsAnnual(true)}
+               onClick={() => {
+                 setIsTransitioning(true);
+                 setTimeout(() => {
+                   setIsAnnual(true);
+                   setIsTransitioning(false);
+                 }, 250);
+               }}
                className={`px-4 py-2 rounded-full transition-smooth ${isAnnual ? 'bg-primary/10 text-primary font-semibold' : 'text-muted-foreground'}`}
              >
                Annuel -25% d'économie
@@ -43,7 +56,9 @@ const PricingSection = () => {
         </div>
 
         <div className="max-w-md mx-auto">
-          <div className="bg-white rounded-2xl shadow-card p-8 text-center border border-primary/20">
+          <div className={`bg-white rounded-2xl shadow-card p-8 text-center border border-primary/20 transition-all duration-500 ease-in-out ${
+            isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
+          }`}>
             <div className="mb-8">
               <div className="text-6xl font-bold text-primary mb-2">
                 {isAnnual ? "7€" : "9€"}
