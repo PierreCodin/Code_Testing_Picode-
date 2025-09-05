@@ -68,7 +68,7 @@ const HeroSection = () => {
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-20 video-neon-glow">
               <video 
                 src="video.mp4" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 controls
                 controlsList="nodownload"
                 preload="auto"
@@ -77,6 +77,7 @@ const HeroSection = () => {
                 onLoadStart={() => console.log('Video loading started')}
                 onError={(e) => console.log('Video error:', e)}
                 key="revwheel-video-final"
+                style={{aspectRatio: '9/16'}}
               />
             </div>
             
