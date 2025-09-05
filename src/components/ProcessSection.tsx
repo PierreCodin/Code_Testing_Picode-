@@ -52,7 +52,7 @@ const ProcessSection = () => {
               
               {/* Numéro de l'étape */}
               <div className="relative">
-                <div className="w-16 h-16 mx-auto gradient-hero rounded-full flex items-center justify-center text-white text-xl font-bold shadow-button hover:scale-[1.2] transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 mx-auto gradient-hero rounded-full flex items-center justify-center text-white text-xl font-bold shadow-button hover:scale-[1.32] transition-all duration-300 cursor-pointer">
                   {step.number}
                 </div>
                 {index < steps.length - 1 && (
