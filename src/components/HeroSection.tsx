@@ -65,7 +65,7 @@ const HeroSection = () => {
 
           {/* Right Content - Video Mockup */}
           <div className="relative flex justify-end">
-            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-16 video-neon-glow">
+            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-20 video-neon-glow">
               <video 
                 src="video.mp4" 
                 className="w-full h-full object-cover"
