@@ -4,14 +4,14 @@ const BenefitsSection = () => {
   return (
     <section className="py-24 px-6 bg-white/30 backdrop-blur-sm">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
             Fidélisez vos clients{" "}
             <span className="text-primary">simplement</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content - Animated Image */}
           <div className="relative">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden">
@@ -39,23 +39,23 @@ const BenefitsSection = () => {
           </div>
 
           {/* Right Content - Metrics */}
-          <div className="space-y-8 lg:space-y-12 order-first lg:order-last">
-            <div className="grid grid-cols-2 gap-4 lg:gap-8">
+          <div className="space-y-12">
+            <div className="grid grid-cols-2 gap-8">
               {[
                 { number: "117", label: "avis par mois", color: "text-primary" },
                 { number: "+38%", label: "gain sur leur note", color: "text-green-500" },
                 { number: "100%", label: "satisfaits", color: "text-primary" },
                 { number: "0€", label: "avec 7 jours offert", color: "text-green-500" }
               ].map((stat, index) => (
-                <div key={index} className="text-center space-y-2 group p-4 lg:p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-soft border border-primary/10 relative">
+                <div key={index} className="text-center space-y-2 group p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-soft border border-primary/10 relative">
                   {/* Néon effect */}
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                   <div className="absolute inset-0 rounded-xl shadow-[0_0_15px_rgba(99,102,241,0.1)] opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                   
-                  <div className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${stat.color} group-hover:scale-110 transition-smooth relative z-10`}>
+                  <div className={`text-5xl font-bold ${stat.color} group-hover:scale-110 transition-smooth relative z-10`}>
                     {stat.number}
                   </div>
-                  <div className="text-xs sm:text-sm text-muted-foreground font-medium relative z-10">
+                  <div className="text-muted-foreground font-medium relative z-10">
                     {stat.label}
                   </div>
                 </div>

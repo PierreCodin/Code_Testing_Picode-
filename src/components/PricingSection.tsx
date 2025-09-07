@@ -22,36 +22,36 @@ const PricingSection = () => {
   return (
     <section id="pricing" className="py-24 px-6">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Satisfait ou <span className="text-primary">Remboursé</span>
           </h2>
           
-           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mt-8">
-              <button 
-                onClick={() => {
-                  setIsTransitioning(true);
-                  setTimeout(() => {
-                    setIsAnnual(false);
-                    setIsTransitioning(false);
-                  }, 250);
-                }}
-                className={`px-3 sm:px-4 py-2 rounded-full text-base sm:text-lg font-medium transition-smooth ${!isAnnual ? 'bg-primary/10 text-primary font-semibold' : 'text-muted-foreground'}`}
-              >
-                Mensuel
-              </button>
-              <button 
-                onClick={() => {
-                  setIsTransitioning(true);
-                  setTimeout(() => {
-                    setIsAnnual(true);
-                    setIsTransitioning(false);
-                  }, 250);
-                }}
-                className={`px-3 sm:px-4 py-2 rounded-full text-base sm:text-lg transition-smooth ${isAnnual ? 'bg-primary/10 text-primary font-semibold' : 'text-muted-foreground'} text-center`}
-              >
-                Annuel -25% d'économie
-              </button>
+           <div className="flex items-center justify-center space-x-8 mt-8">
+             <button 
+               onClick={() => {
+                 setIsTransitioning(true);
+                 setTimeout(() => {
+                   setIsAnnual(false);
+                   setIsTransitioning(false);
+                 }, 250);
+               }}
+               className={`px-4 py-2 rounded-full text-lg font-medium transition-smooth ${!isAnnual ? 'bg-primary/10 text-primary font-semibold' : 'text-muted-foreground'}`}
+             >
+               Mensuel
+             </button>
+             <button 
+               onClick={() => {
+                 setIsTransitioning(true);
+                 setTimeout(() => {
+                   setIsAnnual(true);
+                   setIsTransitioning(false);
+                 }, 250);
+               }}
+               className={`px-4 py-2 rounded-full transition-smooth ${isAnnual ? 'bg-primary/10 text-primary font-semibold' : 'text-muted-foreground'}`}
+             >
+               Annuel -25% d'économie
+             </button>
            </div>
         </div>
 
@@ -59,8 +59,8 @@ const PricingSection = () => {
           <div className={`bg-white rounded-2xl shadow-card p-8 text-center border border-primary/20 transition-all duration-500 ease-in-out ${
             isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
           }`}>
-            <div className="mb-6 lg:mb-8">
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-2">
+            <div className="mb-8">
+              <div className="text-6xl font-bold text-primary mb-2">
                 {isAnnual ? "7€" : "9€"}
               </div>
               <div className="text-muted-foreground">par mois</div>
@@ -98,19 +98,19 @@ const PricingSection = () => {
         </div>
 
         {/* Social Proof */}
-        <div className="mt-16 lg:mt-20 text-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="mt-20 text-center">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="space-y-2">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">250+</div>
-              <div className="text-sm lg:text-base text-muted-foreground">Commerçants en France</div>
+              <div className="text-4xl font-bold text-primary">250+</div>
+              <div className="text-muted-foreground">Commerçants en France</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">20k+</div>
-              <div className="text-sm lg:text-base text-muted-foreground">Avis collectés</div>
+              <div className="text-4xl font-bold text-primary">20k+</div>
+              <div className="text-muted-foreground">Avis collectés</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">4.8/5</div>
-              <div className="text-sm lg:text-base text-muted-foreground">Note moyenne clients</div>
+              <div className="text-4xl font-bold text-primary">4.8/5</div>
+              <div className="text-muted-foreground">Note moyenne clients</div>
             </div>
           </div>
         </div>

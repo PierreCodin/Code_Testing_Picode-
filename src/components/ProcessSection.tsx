@@ -35,14 +35,14 @@ const ProcessSection = () => {
   return (
     <section className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Faites exploser vos avis Google{" "}
             <span className="text-primary">sans rien faire</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {steps.map((step, index) => (
             <div key={index} className="text-center space-y-6 group">
               {/* Espace réservé sans icône */}
@@ -60,11 +60,11 @@ const ProcessSection = () => {
                 )}
               </div>
               
-              <h3 className="text-lg lg:text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-foreground">
                 {step.title}
               </h3>
               
-              <p className="text-sm lg:text-base text-muted-foreground">
+              <p className="text-muted-foreground">
                 {step.description}
               </p>
             </div>
