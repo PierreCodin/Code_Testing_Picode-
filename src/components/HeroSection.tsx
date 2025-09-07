@@ -26,37 +26,37 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto max-w-7xl relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
+            <div className="space-y-4 lg:space-y-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
                 Collectez des Avis Google{" "}
                 <span className="text-primary">(sans effort)</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
                 La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
               </p>
             </div>
 
-            <Button variant="hero" size="xl" className="text-lg">
+            <Button variant="hero" size="xl" className="text-base lg:text-lg w-full sm:w-auto">
               Essayez gratuitement
             </Button>
 
             {/* Features List */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
               {[
                 "7 jours gratuits",
                 "Pas de CB requise", 
                 "Sans Engagement",
                 "Mise en place en 5min"
               ].map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div key={index} className="flex items-center justify-center sm:justify-start space-x-3">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full gradient-subtle flex items-center justify-center">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="text-foreground/80 font-medium">{feature}</span>
+                  <span className="text-foreground/80 font-medium text-sm lg:text-base">{feature}</span>
                 </div>
               ))}
             </div>
@@ -64,8 +64,8 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Video Mockup */}
-          <div className="relative flex justify-end">
-            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] max-w-xs ml-20 video-neon-glow">
+          <div className="relative flex justify-center lg:justify-end order-first lg:order-last">
+            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] w-full max-w-[280px] sm:max-w-xs lg:ml-20 video-neon-glow">
               <video 
                 src="https://pierrecodin.github.io/VideoRevwheel/VideoRevwheel.mp4" 
                 className="w-full h-full object-contain"

@@ -122,11 +122,11 @@ Juste et sécurisé : un seul spin par client — pas de triche, pas d'abus.`
       </div>
 
       <div className="container mx-auto max-w-4xl relative">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Questions <span className="text-primary">Fréquentes</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg lg:text-xl text-muted-foreground">
             Tout ce que vous devez savoir sur RevWheel
           </p>
         </div>
@@ -145,12 +145,12 @@ Juste et sécurisé : un seul spin par client — pas de triche, pas d'abus.`
               >
                 <AccordionItem 
                   value={`item-${index}`}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10 px-6"
+                  className="bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10 px-4 lg:px-6"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary transition-smooth">
+                  <AccordionTrigger className="text-left font-semibold text-sm lg:text-base text-foreground hover:text-primary transition-smooth">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  <AccordionContent className="text-sm lg:text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

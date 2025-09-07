@@ -44,21 +44,21 @@ const StatsSection = () => {
         
         
         <div className="relative">
-          <span className="text-8xl font-bold gradient-hero bg-clip-text text-transparent">
+          <span className="text-4xl sm:text-6xl lg:text-8xl font-bold gradient-hero bg-clip-text text-transparent">
             {currentCount}+
           </span>
           
           {/* Animated counter effect */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full gradient-subtle opacity-20 animate-pulse"></div>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full gradient-subtle opacity-20 animate-pulse"></div>
           </div>
         </div>
 
         {/* Client logos carousel */}
-        <div className="mt-16 overflow-hidden">
-          <div className="flex space-x-12 items-center animate-scroll">
+        <div className="mt-12 lg:mt-16 overflow-hidden">
+          <div className="flex space-x-6 sm:space-x-8 lg:space-x-12 items-center animate-scroll">
             {clientLogos.map((logo, i) => (
-              <div key={i} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
+              <div key={i} className="flex-shrink-0 w-16 h-12 sm:w-20 sm:h-14 lg:w-24 lg:h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
                 <img 
                   src={logo}
                   alt={`Client ${i + 1}`}
@@ -68,7 +68,7 @@ const StatsSection = () => {
             ))}
             {/* Duplicate for seamless loop */}
             {clientLogos.map((logo, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
+              <div key={`dup-${i}`} className="flex-shrink-0 w-16 h-12 sm:w-20 sm:h-14 lg:w-24 lg:h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
                 <img 
                   src={logo}
                   alt={`Client ${i + 1}`}
