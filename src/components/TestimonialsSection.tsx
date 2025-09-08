@@ -59,23 +59,23 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-primary/5 to-primary/10">
+    <section className="py-16 lg:py-24 px-4 lg:px-6 bg-gradient-to-br from-primary/5 to-primary/10">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4">
             Ils nous font <span className="text-primary">confiance</span>
           </h2>
         </div>
 
-        <div className="relative px-24">
-          <div className={`bg-white rounded-2xl shadow-card p-8 text-center max-w-3xl mx-auto transition-all duration-500 ease-in-out ${
+        <div className="relative px-4 lg:px-24">
+          <div className={`bg-white rounded-2xl shadow-card p-6 lg:p-8 text-center max-w-3xl mx-auto transition-all duration-500 ease-in-out ${
             isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
           }`}>
             <div className="mb-4">
               <img 
                 src={testimonials[currentIndex].image} 
                 alt={testimonials[currentIndex].name}
-                className="w-14 h-14 rounded-full mx-auto object-cover"
+                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full mx-auto object-cover"
               />
             </div>
             
@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
               ))}
             </div>
             
-            <blockquote className="text-lg text-foreground leading-relaxed mb-4 italic px-4">
+            <blockquote className="text-base lg:text-lg text-foreground leading-relaxed mb-4 italic px-2 lg:px-4">
               "{testimonials[currentIndex].text}"
             </blockquote>
             
@@ -98,17 +98,17 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Navigation buttons */}
+          {/* Navigation buttons - hidden on mobile */}
           <button 
             onClick={prevTestimonial}
-            className="absolute -left-12 top-1/2 transform -translate-y-1/2 bg-white shadow-soft rounded-full p-3 hover:bg-primary/10 transition-smooth z-10"
+            className="hidden lg:block absolute -left-12 top-1/2 transform -translate-y-1/2 bg-white shadow-soft rounded-full p-3 hover:bg-primary/10 transition-smooth z-10"
           >
             <ChevronLeft className="w-6 h-6 text-primary" />
           </button>
           
           <button 
             onClick={nextTestimonial}
-            className="absolute -right-12 top-1/2 transform -translate-y-1/2 bg-white shadow-soft rounded-full p-3 hover:bg-primary/10 transition-smooth z-10"
+            className="hidden lg:block absolute -right-12 top-1/2 transform -translate-y-1/2 bg-white shadow-soft rounded-full p-3 hover:bg-primary/10 transition-smooth z-10"
           >
             <ChevronRight className="w-6 h-6 text-primary" />
           </button>
@@ -125,7 +125,7 @@ const TestimonialsSection = () => {
                     setIsTransitioning(false);
                   }, 250);
                 }}
-                className={`w-2 h-2 rounded-full transition-colors ${
+                className={`w-3 h-3 lg:w-2 lg:h-2 rounded-full transition-colors ${
                   index === currentIndex ? 'bg-primary' : 'bg-primary/30'
                 }`}
               />

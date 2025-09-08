@@ -112,9 +112,9 @@ Juste et sécurisé : un seul spin par client — pas de triche, pas d'abus.`
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-white/30 backdrop-blur-sm relative overflow-hidden">
-      {/* Animated shapes */}
-      <div className="absolute inset-0 opacity-20">
+    <section ref={sectionRef} className="py-16 lg:py-24 px-4 lg:px-6 bg-white/30 backdrop-blur-sm relative overflow-hidden">
+      {/* Animated shapes - hidden on mobile */}
+      <div className="hidden lg:block absolute inset-0 opacity-20">
         <div className="absolute top-20 right-10 w-16 h-16 bg-primary/20 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute bottom-32 left-16 w-8 h-8 bg-primary/25 rotate-45 animate-bounce delay-2000"></div>
         <div className="absolute top-1/2 right-1/4 w-6 h-6 border-2 border-primary/30 rounded-full animate-spin" style={{animationDuration: '8s'}}></div>
@@ -122,17 +122,17 @@ Juste et sécurisé : un seul spin par client — pas de triche, pas d'abus.`
       </div>
 
       <div className="container mx-auto max-w-4xl relative">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4">
             Questions <span className="text-primary">Fréquentes</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg lg:text-xl text-muted-foreground px-2">
             Tout ce que vous devez savoir sur RevWheel
           </p>
         </div>
 
         <div>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 lg:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -145,12 +145,12 @@ Juste et sécurisé : un seul spin par client — pas de triche, pas d'abus.`
               >
                 <AccordionItem 
                   value={`item-${index}`}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10 px-6"
+                  className="bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10 px-4 lg:px-6"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary transition-smooth">
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary transition-smooth text-sm lg:text-base py-4 lg:py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line text-sm lg:text-base pb-4 lg:pb-6">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -159,14 +159,14 @@ Juste et sécurisé : un seul spin par client — pas de triche, pas d'abus.`
           </Accordion>
         </div>
 
-        <div className={`text-center mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} id="contact">
-          <p className="text-muted-foreground mb-4">
+        <div className={`text-center mt-8 lg:mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} id="contact">
+          <p className="text-muted-foreground mb-4 text-sm lg:text-base">
             Vous avez d'autres questions ?
           </p>
            <Button 
              variant="outline" 
              size="lg" 
-             className="hover:bg-primary hover:text-white transition-smooth"
+             className="hover:bg-primary hover:text-white transition-smooth w-full sm:w-auto"
              onClick={() => window.location.href = 'mailto:revwheelpro@gmail.com?subject=Demande d\'information RevWheel&body=Bonjour, je souhaiterais avoir plus d\'informations sur RevWheel.'}
            >
              Contactez-nous

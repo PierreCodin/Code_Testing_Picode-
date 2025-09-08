@@ -36,29 +36,29 @@ const StatsSection = () => {
    }, []);
   
   return (
-    <section className="py-16 px-6 bg-white/50 backdrop-blur-sm">
+    <section className="py-12 lg:py-16 px-4 lg:px-6 bg-white/50 backdrop-blur-sm">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-lg text-muted-foreground mb-4">
+        <h2 className="text-sm lg:text-lg text-muted-foreground mb-6 lg:mb-4">
           Le nombre d'avis obtenus par nos clients aujourd'hui
         </h2>
         
         
-        <div className="relative">
-          <span className="text-8xl font-bold gradient-hero bg-clip-text text-transparent">
+        <div className="relative mb-8 lg:mb-0">
+          <span className="text-5xl sm:text-6xl lg:text-8xl font-bold gradient-hero bg-clip-text text-transparent">
             {currentCount}+
           </span>
           
           {/* Animated counter effect */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full gradient-subtle opacity-20 animate-pulse"></div>
+            <div className="w-20 h-20 lg:w-32 lg:h-32 rounded-full gradient-subtle opacity-20 animate-pulse"></div>
           </div>
         </div>
 
         {/* Client logos carousel */}
-        <div className="mt-16 overflow-hidden">
-          <div className="flex space-x-12 items-center animate-scroll">
+        <div className="mt-12 lg:mt-16 overflow-hidden">
+          <div className="flex space-x-6 lg:space-x-12 items-center animate-scroll">
             {clientLogos.map((logo, i) => (
-              <div key={i} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
+              <div key={i} className="flex-shrink-0 w-16 h-12 lg:w-24 lg:h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
                 <img 
                   src={logo}
                   alt={`Client ${i + 1}`}
@@ -68,7 +68,7 @@ const StatsSection = () => {
             ))}
             {/* Duplicate for seamless loop */}
             {clientLogos.map((logo, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
+              <div key={`dup-${i}`} className="flex-shrink-0 w-16 h-12 lg:w-24 lg:h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
                 <img 
                   src={logo}
                   alt={`Client ${i + 1}`}
