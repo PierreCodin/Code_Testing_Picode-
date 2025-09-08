@@ -29,34 +29,34 @@ const HeroSection = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center text-center lg:text-left">
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
-            <div className="space-y-4 lg:space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
+            <div className="space-y-4 lg:space-y-6 max-md:space-y-6">
+              <h1 className="max-md:text-2xl max-md:font-bold max-md:text-center max-md:leading-tight lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
                 Collectez des Avis Google{" "}
                 <span className="text-primary">(sans effort)</span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
+              <p className="max-md:text-base max-md:font-normal max-md:leading-relaxed max-md:text-center max-md:px-4 lg:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
                 La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
               </p>
             </div>
 
-            <Button variant="hero" size="xl" className="text-base lg:text-lg w-full sm:w-auto">
+            <Button variant="hero" size="xl" className="max-md:w-4/5 max-md:mx-auto max-md:rounded-2xl max-md:text-base max-md:font-semibold text-base lg:text-lg w-full sm:w-auto">
               Essayez gratuitement
             </Button>
 
             {/* Features List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-w-md mx-auto lg:mx-0">
+            <div className="max-md:flex max-md:flex-col max-md:items-center max-md:space-y-4 max-md:w-5/6 max-md:mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 max-w-md mx-auto lg:mx-0">
               {[
                 "7 jours gratuits",
                 "Pas de CB requise", 
                 "Sans Engagement",
                 "Mise en place en 5min"
               ].map((feature, index) => (
-                <div key={index} className="flex items-center justify-center lg:justify-start space-x-3">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full gradient-subtle flex items-center justify-center">
-                    <Check className="w-3 h-3 text-primary" />
+                <div key={index} className="max-md:bg-white/80 max-md:backdrop-blur-sm max-md:rounded-xl max-md:shadow-soft max-md:border max-md:border-primary/10 max-md:p-4 max-md:w-full flex items-center justify-center lg:justify-start space-x-3">
+                  <div className="max-md:w-12 max-md:h-12 flex-shrink-0 w-5 h-5 rounded-full gradient-subtle flex items-center justify-center">
+                    <Check className="max-md:w-4 max-md:h-4 w-3 h-3 text-primary" />
                   </div>
-                  <span className="text-foreground/80 font-medium text-sm lg:text-base">{feature}</span>
+                  <span className="max-md:text-lg max-md:font-semibold max-md:text-center text-foreground/80 font-medium text-sm lg:text-base">{feature}</span>
                 </div>
               ))}
             </div>
@@ -65,7 +65,7 @@ const HeroSection = () => {
 
           {/* Right Content - Video Mockup */}
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] w-48 sm:w-56 lg:max-w-xs lg:ml-20 video-neon-glow">
+            <div className="max-md:w-9/10 max-md:max-w-xs max-md:mx-auto relative z-10 shadow-card rounded-2xl overflow-hidden bg-white aspect-[9/16] w-48 sm:w-56 lg:max-w-xs lg:ml-20 video-neon-glow">
               <video 
                 src="https://pierrecodin.github.io/VideoRevwheel/VideoRevwheel.mp4" 
                 className="w-full h-full object-contain"
