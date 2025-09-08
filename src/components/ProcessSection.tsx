@@ -33,26 +33,26 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 px-4 lg:px-6">
+    <section className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Faites exploser vos avis Google{" "}
             <span className="text-primary">sans rien faire</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {steps.map((step, index) => (
-            <div key={index} className="text-center space-y-4 lg:space-y-6 group">
+            <div key={index} className="text-center space-y-6 group">
               {/* Espace réservé sans icône */}
-              <div className="flex justify-center mb-4 lg:mb-6">
-                <div className="w-16 h-16 lg:w-20 lg:h-20"></div>
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20"></div>
               </div>
               
               {/* Numéro de l'étape */}
               <div className="relative">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto gradient-hero rounded-full flex items-center justify-center text-white text-lg lg:text-xl font-bold shadow-button hover:scale-[1.32] transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 mx-auto gradient-hero rounded-full flex items-center justify-center text-white text-xl font-bold shadow-button hover:scale-[1.32] transition-all duration-300 cursor-pointer">
                   {step.number}
                 </div>
                 {index < steps.length - 1 && (
@@ -60,11 +60,11 @@ const ProcessSection = () => {
                 )}
               </div>
               
-              <h3 className="text-lg lg:text-xl font-semibold text-foreground px-2">
+              <h3 className="text-xl font-semibold text-foreground">
                 {step.title}
               </h3>
               
-              <p className="text-muted-foreground text-sm lg:text-base px-2">
+              <p className="text-muted-foreground">
                 {step.description}
               </p>
             </div>
@@ -72,7 +72,7 @@ const ProcessSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="xl" className="hover:bg-white hover:text-primary transition-smooth w-full sm:w-auto">
+          <Button variant="hero" size="xl" className="hover:bg-white hover:text-primary transition-smooth">
             7 jours gratuits
           </Button>
         </div>
