@@ -95,19 +95,25 @@ const HeroSection = () => {
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center space-y-6">
           {/* Bloc Titre */}
-          <div className="text-center space-y-6 mb-6">
+          <div className="text-center space-y-6 mb-4" style={{width: '90%'}}>
             <h1 className="font-bold text-foreground text-center" style={{fontSize: '28px', lineHeight: '34px'}}>
-              Collectez des Avis Google{" "}
-              <span className="text-primary">(sans effort)</span>
+              <div>Collectez des</div>
+              <div>Avis Google</div>
+              <div className="text-primary">(sans effort)</div>
             </h1>
             
-            <h2 className="text-muted-foreground text-center font-normal" style={{fontSize: '16px', lineHeight: '22px'}}>
+            <h2 className="text-muted-foreground text-center font-normal" style={{
+              fontSize: '16px', 
+              lineHeight: '26px',
+              letterSpacing: '0.3px',
+              wordSpacing: '2px'
+            }}>
               La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
             </h2>
           </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-center mb-6">
+          <div className="w-full flex justify-center mb-4">
             <Button 
               variant="hero" 
               className="text-center font-bold" 
@@ -125,7 +131,7 @@ const HeroSection = () => {
           </div>
 
           {/* Liste des avantages */}
-          <div className="w-full space-y-3 mb-5">
+          <div className="w-full space-y-2 mb-3" style={{marginLeft: '8%'}}>
             {[
               "7 jours gratuits",
               "Pas de CB requise", 
@@ -136,7 +142,7 @@ const HeroSection = () => {
                 <div className="flex-shrink-0 rounded-full gradient-subtle flex items-center justify-center" style={{width: '16px', height: '16px'}}>
                   <Check className="text-primary" style={{width: '10px', height: '10px'}} />
                 </div>
-                <span className="text-foreground/80 font-medium text-left" style={{fontSize: '14px', lineHeight: '20px'}}>
+                <span className="text-foreground/80 font-medium text-left" style={{fontSize: '14px', lineHeight: '18px'}}>
                   {feature}
                 </span>
               </div>
@@ -144,7 +150,7 @@ const HeroSection = () => {
           </div>
 
           {/* Vidéo */}
-          <div className="w-full flex justify-center mt-5 mb-5">
+          <div className="w-full flex justify-center mt-8 mb-5">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white video-neon-glow" style={{width: '85%', aspectRatio: '9/16'}}>
               <video 
                 src="https://pierrecodin.github.io/VideoRevwheel/VideoRevwheel.mp4" 
