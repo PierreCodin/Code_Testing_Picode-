@@ -26,7 +26,8 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto max-w-7xl relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Desktop Layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -60,7 +61,6 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            
           </div>
 
           {/* Right Content - Video Mockup */}
@@ -90,19 +90,90 @@ const HeroSection = () => {
             <div className="absolute bottom-1/3 -left-6 w-4 h-4 bg-primary/35 rounded-full animate-pulse delay-2500"></div>
             <div className="absolute top-2/3 -right-12 w-6 h-6 border border-primary/25 rounded-full animate-spin delay-3000" style={{animationDuration: '6s'}}></div>
           </div>
-          
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              .video-neon-glow {
-                box-shadow: 
-                  0 0 25px rgba(99, 102, 241, 0.4),
-                  0 0 50px rgba(99, 102, 241, 0.3),
-                  0 0 75px rgba(99, 102, 241, 0.2);
-                border: 2px solid rgba(99, 102, 241, 0.3);
-              }
-            `
-          }} />
         </div>
+
+        {/* Mobile Layout */}
+        <div className="lg:hidden flex flex-col items-center space-y-6">
+          {/* Bloc Titre */}
+          <div className="text-center space-y-6 mb-6">
+            <h1 className="font-bold text-foreground text-center" style={{fontSize: '28px', lineHeight: '34px'}}>
+              Collectez des Avis Google{" "}
+              <span className="text-primary">(sans effort)</span>
+            </h1>
+            
+            <h2 className="text-muted-foreground text-center font-normal" style={{fontSize: '16px', lineHeight: '22px'}}>
+              La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
+            </h2>
+          </div>
+
+          {/* CTA Button */}
+          <div className="w-full flex justify-center mb-6">
+            <Button 
+              variant="hero" 
+              className="text-center font-bold" 
+              style={{
+                width: '80%', 
+                height: '48px', 
+                borderRadius: '30px', 
+                fontSize: '16px',
+                paddingTop: '14px',
+                paddingBottom: '14px'
+              }}
+            >
+              Essayez gratuitement
+            </Button>
+          </div>
+
+          {/* Liste des avantages */}
+          <div className="w-full space-y-3 mb-5">
+            {[
+              "7 jours gratuits",
+              "Pas de CB requise", 
+              "Sans Engagement",
+              "Mise en place en 5min"
+            ].map((feature, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <div className="flex-shrink-0 rounded-full gradient-subtle flex items-center justify-center" style={{width: '16px', height: '16px'}}>
+                  <Check className="text-primary" style={{width: '10px', height: '10px'}} />
+                </div>
+                <span className="text-foreground/80 font-medium text-left" style={{fontSize: '14px', lineHeight: '20px'}}>
+                  {feature}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Vidéo */}
+          <div className="w-full flex justify-center mt-5 mb-5">
+            <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white video-neon-glow" style={{width: '85%', aspectRatio: '9/16'}}>
+              <video 
+                src="https://pierrecodin.github.io/VideoRevwheel/VideoRevwheel.mp4" 
+                className="w-full h-full object-contain"
+                controls
+                controlsList="nodownload"
+                preload="auto"
+                muted
+                playsInline
+                onLoadStart={() => console.log('Video loading started')}
+                onError={(e) => console.log('Video error:', e)}
+                key="revwheel-video-final-mobile"
+                style={{aspectRatio: '9/16'}}
+              />
+            </div>
+          </div>
+        </div>
+        
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .video-neon-glow {
+              box-shadow: 
+                0 0 25px rgba(99, 102, 241, 0.4),
+                0 0 50px rgba(99, 102, 241, 0.3),
+                0 0 75px rgba(99, 102, 241, 0.2);
+              border: 2px solid rgba(99, 102, 241, 0.3);
+            }
+          `
+        }} />
       </div>
     </section>
   );
