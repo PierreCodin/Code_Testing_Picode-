@@ -95,18 +95,19 @@ const HeroSection = () => {
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center space-y-6">
           {/* Bloc Titre */}
-          <div className="text-center space-y-6 mb-4" style={{width: '90%'}}>
-            <h1 className="font-bold text-foreground text-center" style={{fontSize: '28px', lineHeight: '34px'}}>
+          <div className="text-center space-y-6 mb-4" style={{width: '95%'}}>
+            <h1 className="font-bold text-foreground text-center" style={{fontSize: '52px', lineHeight: '60px'}}>
               <div>Collectez des</div>
               <div>Avis Google</div>
               <div className="text-primary">(sans effort)</div>
             </h1>
             
             <h2 className="text-muted-foreground text-center font-normal" style={{
-              fontSize: '16px', 
-              lineHeight: '26px',
-              letterSpacing: '0.3px',
-              wordSpacing: '2px'
+              fontSize: '20px', 
+              lineHeight: '30px',
+              letterSpacing: '0.5px',
+              wordSpacing: '3px',
+              width: '100%'
             }}>
               La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
             </h2>
@@ -131,7 +132,7 @@ const HeroSection = () => {
           </div>
 
           {/* Liste des avantages */}
-          <div className="w-full space-y-2 mb-3" style={{marginLeft: '8%'}}>
+          <div className="w-full space-y-2 mb-3" style={{marginLeft: '15%'}}>
             {[
               "7 jours gratuits",
               "Pas de CB requise", 
@@ -150,7 +151,7 @@ const HeroSection = () => {
           </div>
 
           {/* Vidéo */}
-          <div className="w-full flex justify-center mt-8 mb-5">
+          <div className="w-full flex justify-center mt-12 mb-5">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white video-neon-glow" style={{width: '85%', aspectRatio: '9/16'}}>
               <video 
                 src="https://pierrecodin.github.io/VideoRevwheel/VideoRevwheel.mp4" 
