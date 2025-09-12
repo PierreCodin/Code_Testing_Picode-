@@ -93,21 +93,24 @@ const HeroSection = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="lg:hidden flex flex-col items-center space-y-6">
+        <div className="lg:hidden flex flex-col items-center space-y-6 px-4">
           {/* Bloc Titre */}
-          <div className="text-center space-y-6 mb-6">
-            <h1 className="font-bold text-foreground text-center" style={{fontSize: '28px', lineHeight: '34px'}}>
-              Collectez des Avis Google{" "}
-              <span className="text-primary">(sans effort)</span>
+          <div className="w-full space-y-4 mb-4">
+            <h1 className="font-bold text-foreground text-center w-full" style={{fontSize: '32px', lineHeight: '38px', paddingLeft: '8px', paddingRight: '8px'}}>
+              <div>Collectez des</div>
+              <div>Avis Google</div>
+              <div><span className="text-primary">(sans effort)</span></div>
             </h1>
             
-            <h2 className="text-muted-foreground text-center font-normal" style={{fontSize: '16px', lineHeight: '22px'}}>
-              La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
+            <h2 className="text-muted-foreground text-center font-normal w-full" style={{fontSize: '16px', lineHeight: '24px', letterSpacing: '0.3px', paddingLeft: '12px', paddingRight: '12px', marginTop: '16px'}}>
+              <div>La meilleure solution pour avoir des avis</div>
+              <div>positifs sur Google de la part de tous vos</div>
+              <div>clients pour être premier dans les recherches.</div>
             </h2>
           </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-center mb-6">
+          <div className="w-full flex justify-center mb-4" style={{marginTop: '8px'}}>
             <Button 
               variant="hero" 
               className="text-center font-bold" 
@@ -125,7 +128,7 @@ const HeroSection = () => {
           </div>
 
           {/* Liste des avantages */}
-          <div className="w-full space-y-3 mb-5">
+          <div className="w-full space-y-2 mb-6" style={{marginTop: '8px'}}>
             {[
               "7 jours gratuits",
               "Pas de CB requise", 
@@ -136,7 +139,7 @@ const HeroSection = () => {
                 <div className="flex-shrink-0 rounded-full gradient-subtle flex items-center justify-center" style={{width: '16px', height: '16px'}}>
                   <Check className="text-primary" style={{width: '10px', height: '10px'}} />
                 </div>
-                <span className="text-foreground/80 font-medium text-left" style={{fontSize: '14px', lineHeight: '20px'}}>
+                <span className="text-foreground/80 font-medium text-left" style={{fontSize: '14px', lineHeight: '18px'}}>
                   {feature}
                 </span>
               </div>
@@ -144,7 +147,7 @@ const HeroSection = () => {
           </div>
 
           {/* Vidéo */}
-          <div className="w-full flex justify-center mt-5 mb-5">
+          <div className="w-full flex justify-center mt-8 mb-5 relative">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white video-neon-glow" style={{width: '85%', aspectRatio: '9/16'}}>
               <video 
                 src="https://pierrecodin.github.io/VideoRevwheel/VideoRevwheel.mp4" 
@@ -159,6 +162,8 @@ const HeroSection = () => {
                 key="revwheel-video-final-mobile"
                 style={{aspectRatio: '9/16'}}
               />
+              {/* Ligne de séparation au niveau du 1/3 de la vidéo */}
+              <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent h-px" style={{top: '33.33%'}}></div>
             </div>
           </div>
         </div>

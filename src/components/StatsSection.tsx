@@ -38,7 +38,7 @@ const StatsSection = () => {
   return (
     <section className="py-16 px-6 bg-white/50 backdrop-blur-sm">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-lg text-muted-foreground mb-4">
+        <h2 className="text-lg lg:text-lg text-muted-foreground mb-4 max-md:text-xl">
           Le nombre d'avis obtenus par nos clients aujourd'hui
         </h2>
         
