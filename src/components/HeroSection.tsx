@@ -86,8 +86,8 @@ const HeroSection = () => {
           width: '90%'
         }}>
             <h1 className="font-bold text-foreground text-center" style={{
-            fontSize: '28px',
-            lineHeight: '34px'
+            fontSize: '48px',
+            lineHeight: '52px'
           }}>
               <div>Collectez des</div>
               <div>Avis Google</div>
@@ -95,12 +95,12 @@ const HeroSection = () => {
             </h1>
             
             <h2 className="text-muted-foreground text-center font-normal" style={{
-            fontSize: '16px',
-            lineHeight: '26px',
+            fontSize: '18px',
+            lineHeight: '28px',
             letterSpacing: '0.3px',
             wordSpacing: '2px'
           }}>
-              La meilleure solution pour avoir des avis positifs sur Google de la part de tous vos clients pour être premier dans les recherches.
+              La meilleure solution pour obtenir des avis positifs sur Google de tous vos clients et être premier dans les recherches.
             </h2>
           </div>
 
