@@ -15,7 +15,7 @@ const BeforeAfterSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 px-[3px] mx-px my-[6px] py-[6px]">
-            En 7 jours avec <span className="text-primary">RevWheel</span>
+            En 7 jours avec<br className="lg:hidden" /> <span className="text-primary">RevWheel</span>
           </h2>
         </div>
 
