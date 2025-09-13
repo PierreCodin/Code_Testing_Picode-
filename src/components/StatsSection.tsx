@@ -7,38 +7,24 @@ import clientLogo5 from "@/assets/client-logo-5.png";
 import clientLogo6 from "@/assets/client-logo-6.png";
 import clientLogo7 from "@/assets/client-logo-7.png";
 import clientLogo8 from "@/assets/client-logo-8.png";
-
 const StatsSection = () => {
-   const [currentCount, setCurrentCount] = useState(526);
-   
-   const clientLogos = [
-     clientLogo1,
-     clientLogo2,
-     clientLogo3,
-     clientLogo4,
-     clientLogo5,
-     clientLogo6,
-     clientLogo7,
-     clientLogo8
-   ];
-   
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setCurrentCount(prev => {
-         if (prev < 531) {
-           return prev + 1;
-         }
-         return 531;
-       });
-     }, 12000); // Increment every 12 seconds to reach 531 in 1 minute
-     
-     return () => clearInterval(interval);
-   }, []);
-  
-  return (
-    <section className="py-16 px-6 bg-white/50 backdrop-blur-sm">
+  const [currentCount, setCurrentCount] = useState(526);
+  const clientLogos = [clientLogo1, clientLogo2, clientLogo3, clientLogo4, clientLogo5, clientLogo6, clientLogo7, clientLogo8];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCount(prev => {
+        if (prev < 531) {
+          return prev + 1;
+        }
+        return 531;
+      });
+    }, 12000); // Increment every 12 seconds to reach 531 in 1 minute
+
+    return () => clearInterval(interval);
+  }, []);
+  return <section className="py-16 px-6 bg-white/50 backdrop-blur-sm">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-lg text-muted-foreground mb-4">
+        <h2 className="text-lg text-muted-foreground mb-4 mx-0 px-0">
           Le nombre d'avis obtenus par nos clients aujourd'hui
         </h2>
         
@@ -57,31 +43,19 @@ const StatsSection = () => {
         {/* Client logos carousel */}
         <div className="mt-16 overflow-hidden">
           <div className="flex space-x-12 items-center animate-scroll">
-            {clientLogos.map((logo, i) => (
-              <div key={i} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
-                <img 
-                  src={logo}
-                  alt={`Client ${i + 1}`}
-                  className="w-full h-full object-contain rounded opacity-60"
-                />
-              </div>
-            ))}
+            {clientLogos.map((logo, i) => <div key={i} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
+                <img src={logo} alt={`Client ${i + 1}`} className="w-full h-full object-contain rounded opacity-60" />
+              </div>)}
             {/* Duplicate for seamless loop */}
-            {clientLogos.map((logo, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
-                <img 
-                  src={logo}
-                  alt={`Client ${i + 1}`}
-                  className="w-full h-full object-contain rounded opacity-60"
-                />
-              </div>
-            ))}
+            {clientLogos.map((logo, i) => <div key={`dup-${i}`} className="flex-shrink-0 w-24 h-16 bg-white rounded-lg shadow-soft flex items-center justify-center p-2">
+                <img src={logo} alt={`Client ${i + 1}`} className="w-full h-full object-contain rounded opacity-60" />
+              </div>)}
           </div>
         </div>
       </div>
       
       <style dangerouslySetInnerHTML={{
-        __html: `
+      __html: `
           @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -90,9 +64,7 @@ const StatsSection = () => {
             animation: scroll 20s linear infinite;
           }
         `
-      }} />
-    </section>
-  );
+    }} />
+    </section>;
 };
-
 export default StatsSection;

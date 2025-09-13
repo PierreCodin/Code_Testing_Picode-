@@ -1,28 +1,20 @@
-
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-
 const BeforeAfterSection = () => {
-  const benefits = [
-    {
-      title: "Gagnez des avis Google",
-      subtitle: "sans effort"
-    },
-    {
-      title: "Récupérez les coordonnées clients", 
-      subtitle: "emails et téléphones pour vos campagnes"
-    },
-    {
-      title: "Devenez numéro 1 sur Google",
-      subtitle: "grâce aux avis collectés"
-    }
-  ];
-
-  return (
-    <section className="py-24 px-6 bg-gradient-to-br from-primary/5 to-primary/10">
+  const benefits = [{
+    title: "Gagnez des avis Google",
+    subtitle: "sans effort"
+  }, {
+    title: "Récupérez les coordonnées clients",
+    subtitle: "emails et téléphones pour vos campagnes"
+  }, {
+    title: "Devenez numéro 1 sur Google",
+    subtitle: "grâce aux avis collectés"
+  }];
+  return <section className="py-24 px-6 bg-gradient-to-br from-primary/5 to-primary/10">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 px-[3px] mx-px my-[6px] py-[6px]">
             En 7 jours avec <span className="text-primary">RevWheel</span>
           </h2>
         </div>
@@ -31,11 +23,7 @@ const BeforeAfterSection = () => {
           {/* Left Content - Image */}
           <div className="relative">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/13933107-865a-4ba9-b64a-78be09cffad7.png" 
-                alt="Avant/Après - Résultats RevWheel" 
-                className="w-full h-auto"
-              />
+              <img src="/lovable-uploads/13933107-865a-4ba9-b64a-78be09cffad7.png" alt="Avant/Après - Résultats RevWheel" className="w-full h-auto" />
             </div>
             
             {/* Floating decorations */}
@@ -46,9 +34,8 @@ const BeforeAfterSection = () => {
           {/* Right Content - Benefits */}
           <div className="space-y-8">
             <div className="grid gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-soft">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full gradient-hero flex items-center justify-center mt-1">
+              {benefits.map((benefit, index) => <div key={index} className="flex items-start space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-soft">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full gradient-hero flex items-center justify-center mt-1 py-0 px-0 my-[3px]">
                     <Check className="w-3 h-3 text-white" />
                   </div>
                   <div>
@@ -59,8 +46,7 @@ const BeforeAfterSection = () => {
                       {benefit.subtitle}
                     </p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <Button variant="hero" size="xl">
@@ -69,8 +55,6 @@ const BeforeAfterSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BeforeAfterSection;
