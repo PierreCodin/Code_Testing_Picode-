@@ -86,8 +86,8 @@ const HeroSection = () => {
           width: '90%'
         }}>
             <h1 className="font-bold text-foreground text-center" style={{
-            fontSize: '48px',
-            lineHeight: '52px'
+            fontSize: '40px',
+            lineHeight: '44px'
           }}>
               <div>Collectez des</div>
               <div>Avis Google</div>
@@ -95,8 +95,8 @@ const HeroSection = () => {
             </h1>
             
             <h2 className="text-muted-foreground text-center font-normal" style={{
-            fontSize: '18px',
-            lineHeight: '28px',
+            fontSize: '16px',
+            lineHeight: '24px',
             letterSpacing: '0.3px',
             wordSpacing: '2px'
           }}>
