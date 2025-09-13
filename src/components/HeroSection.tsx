@@ -121,7 +121,7 @@ const HeroSection = () => {
           {/* Liste des avantages */}
           <div style={{
           marginLeft: '8%'
-        }} className="w-full space-y-2 mb-3 px-[69px] py-[5px]">
+        }} className="w-full space-y-2 mb-3 px-[69px] py-[2px]">
             {["7 jours gratuits", "Pas de CB requise", "Sans Engagement", "Mise en place en 5min"].map((feature, index) => <div key={index} className="flex items-center space-x-3 px-0 py-0">
                 <div className="flex-shrink-0 rounded-full gradient-subtle flex items-center justify-center" style={{
               width: '16px',
