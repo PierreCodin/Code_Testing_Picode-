@@ -86,8 +86,8 @@ const HeroSection = () => {
           width: '90%'
         }}>
             <h1 className="font-bold text-foreground text-center" style={{
-            fontSize: '40px',
-            lineHeight: '44px'
+            fontSize: '44px',
+            lineHeight: '48px'
           }}>
               <div>Collectez des</div>
               <div>Avis Google</div>
@@ -96,7 +96,7 @@ const HeroSection = () => {
             
             <h2 className="text-muted-foreground text-center font-normal" style={{
             fontSize: '16px',
-            lineHeight: '24px',
+            lineHeight: '28px',
             letterSpacing: '0.3px',
             wordSpacing: '2px'
           }}>
@@ -142,7 +142,7 @@ const HeroSection = () => {
           </div>
 
           {/* Vidéo */}
-          <div className="w-full flex justify-center mt-8 mb-5">
+          <div className="w-full flex justify-center mt-12 mb-5">
             <div className="relative z-10 shadow-card rounded-2xl overflow-hidden bg-white video-neon-glow" style={{
             width: '85%',
             aspectRatio: '9/16'
