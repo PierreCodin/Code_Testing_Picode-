@@ -85,7 +85,7 @@ const HeroSection = () => {
           <div className="text-center space-y-6 mb-4" style={{
           width: '90%'
         }}>
-            <h1 className="font-bold text-foreground text-center" style={{
+            <h1 className="font-poppins font-bold text-foreground text-center" style={{
             fontSize: '44px',
             lineHeight: '48px'
           }}>
@@ -94,7 +94,7 @@ const HeroSection = () => {
               <div className="text-primary">(sans effort)</div>
             </h1>
             
-            <h2 className="text-muted-foreground text-center font-normal" style={{
+            <h2 className="font-poppins text-muted-foreground text-center font-normal" style={{
             fontSize: '16px',
             lineHeight: '28px',
             letterSpacing: '0.3px',
@@ -132,7 +132,7 @@ const HeroSection = () => {
                 height: '10px'
               }} />
                 </div>
-                <span className="text-foreground/80 font-medium text-left" style={{
+                <span className="font-poppins text-foreground/80 font-medium text-left" style={{
               fontSize: '14px',
               lineHeight: '18px'
             }}>
