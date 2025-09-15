@@ -86,8 +86,8 @@ const HeroSection = () => {
           width: '90%'
         }}>
             <h1 className="font-poppins font-bold text-foreground text-center" style={{
-            fontSize: '44px',
-            lineHeight: '48px'
+            fontSize: '35px',
+            lineHeight: '40px'
           }}>
               <div>Collectez des</div>
               <div>Avis Google</div>
@@ -95,8 +95,8 @@ const HeroSection = () => {
             </h1>
             
             <h2 className="font-poppins text-muted-foreground text-center font-normal" style={{
-            fontSize: '16px',
-            lineHeight: '28px',
+            fontSize: '14px',
+            lineHeight: '26px',
             letterSpacing: '0.3px',
             wordSpacing: '2px'
           }}>
@@ -133,8 +133,8 @@ const HeroSection = () => {
               }} />
                 </div>
                 <span className="font-poppins text-foreground/80 font-medium text-left" style={{
-              fontSize: '14px',
-              lineHeight: '18px'
+              fontSize: '12px',
+              lineHeight: '16px'
             }}>
                   {feature}
                 </span>
